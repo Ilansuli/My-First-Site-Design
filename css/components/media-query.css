@@ -1,0 +1,189 @@
+@media (max-width: 760px) {
+    /* HAMBURGER-MENU */
+
+    .ham-menu,
+    .ham-menu::before,
+    .ham-menu::after {
+        display: block;
+        background-color: #fff;
+        /* position: absolute; */
+        height: 4px;
+        width: 30px;
+        border-radius: 2px;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+
+    .ham-menu::before {
+        content: '';
+        margin-top: -8px;
+    }
+
+    .ham-menu::after {
+        content: '';
+        margin-top: 12px;
+    }
+    .ham-menu:hover{
+        background-color: #58c93a;
+    }
+    /* HEADER */
+
+    nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        background-color: #292929cc;
+        transform: translateX(100%);
+        transition: transform .6s;
+        padding-block-start: 20px;
+
+    }
+
+    .main-menu {
+        padding-inline: 0;
+        font-size: larger;
+        flex-direction: column;
+        /* grid-auto-flow: row; */
+    }
+
+    body.opened-menu nav {
+        transform: translateX(0);
+    }
+
+    .main-menu li a {
+        padding-inline: 70px;
+        padding-block: 30px;
+    }
+
+    .main-menu li a:hover {
+        box-shadow: inset 0px -1px 0px #58c93a;
+    }
+
+    /* LAYOUT */
+    .main-layout {
+        grid-template-columns: minmax(30px, 1fr) minmax(auto, 580px) minmax(30px, 1fr);
+
+    }
+
+    .main-card-container {
+        margin-block-start: 80px;
+    }
+
+}
+
+/* SMALL */
+/* 760 PX */
+
+@media (min-width: 760px) {
+
+    /* HELPERS */
+
+    :root {
+        --header-padding: 30px;
+        --header-bottom: 3px;
+    }
+
+    /* LAYOUTS */
+
+    .main-layout {
+        /*Whole Page's Structure*/
+        grid-template-columns: minmax(40px, 1fr) minmax(auto, 980px) minmax(40px, 1fr);
+    }
+
+    .main-layout>* {
+        /*putting main-layouts's childerns inside center Column*/
+        grid-column: 2;
+    }
+
+    .full {
+        grid-column: -1 / 1;
+    }
+
+    .main-card-container {
+        border: 1px solid #e1e0e0;
+    }
+
+    .prev-next {
+        border-top: 1px solid #e1e0e0;
+    }
+
+    /* HEADER */
+    .main-header {
+        border-bottom: --header-bottom solid black;
+    }
+
+    .main-menu li a {
+        padding-block: var(--header-padding);
+        box-shadow: -1px 0 0 #1d1d1d, inset -1px 0 0 #1d1d1d;
+        padding-inline: 2.8125em;
+    }
+
+    .main-menu li a:hover {
+        border-bottom: var(--header-bottom) solid var(--clr3);
+        margin-bottom: -3px;
+    }
+
+    .main-menu {
+        /* grid-auto-flow: column; */
+        position: relative;
+    }
+
+    /* MAIN_CONTENT */
+    .card {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        margin-block-start: 80px;
+    }
+}
+
+/* MEDIUM */
+/* 920 PX */
+@media (min-width: 920px) {
+    :root {
+        --header-padding: 40px;
+        --header-bottom: 5px
+    }
+
+    .main-header {
+        border-bottom: var(--header-bottom) solid black;
+    }
+
+    .main-menu li a {
+        padding-block: var(--header-padding);
+    }
+
+    .main-menu li a:hover {
+        border-bottom: var(--header-bottom) solid var(--clr3);
+        margin-bottom: -5px;
+    }
+}
+
+/* LARGE */
+/* 1060 PX */
+@media (min-width: 1060px) {
+    :root {
+        --header-padding: 60px;
+        --header-bottom: 7px
+    }
+
+    .main-header {
+        border-bottom: var(--header-bottom) solid black;
+    }
+
+    .main-menu li a {
+        padding-block: var(--header-padding);
+    }
+
+    .main-menu li a:hover {
+        border-bottom: var(--header-bottom) solid var(--clr3);
+        margin-bottom: -7px;
+    }
+
+    /* MAIN-CONTENT */
+    /* CARD */
+    .main-layout {
+        /*Whole Page's Structure*/
+        /* grid-template-columns: minmax(20px,1fr) minmax(auto, 980px) minmax(20px,1fr); */
+    }
+}

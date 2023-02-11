@@ -1,0 +1,45 @@
+
+h3{
+    font-family: lato-bold;
+    font-size: 1.75em;
+}
+
+img{
+    width: 100%;
+}
+
+.card{
+    gap: 1rem;
+    /* margin-block-start: 80px  ; */
+}
+
+.card article{
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-between;
+}
+.card-text{
+    flex-direction: column;
+    gap: 10px;
+    letter-spacing: 0.48px;
+    font-family: lato-regular;
+}
+.card-button{
+    position: relative;
+width: 11.625rem;
+color: var(--clr7);
+background-color:#ffffff;
+border: 2px solid var(--clr7);
+border-radius:25px; 
+font-family: lato-bold;
+line-height: 2rem ;
+letter-spacing: 1px;
+cursor: pointer;
+transition: 200ms;
+}
+.card-button:hover{
+color: var(--clr3);
+border-color: var(--clr3) ;
+}
+
+

@@ -1,0 +1,30 @@
+.main-footer .logo{
+
+}
+
+.main-footer p{
+    font-family: lato-regular;
+    color: #a6a6a6;
+}
+.social-media > *{
+    background-color: #a6a6a6;
+    /* width: 30px;
+    height: 30px; */
+    padding-inline: 20px;
+    padding-block: 14px;
+    background-color: #e5e5e5;
+    transition: 200ms;
+    
+}
+.social-media > :nth-child(1):hover{
+    background-color: #516fad;
+}
+.social-media > :nth-child(2):hover{
+    background-color: #17a2f2;
+}
+.social-media > :nth-child(3):hover{
+    background-color: #000b1c;
+}
+.social-media > :nth-child(4):hover{
+    background-color: #c1346b;
+}
